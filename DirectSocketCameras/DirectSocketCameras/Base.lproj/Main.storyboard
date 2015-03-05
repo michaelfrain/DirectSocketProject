@@ -41,14 +41,25 @@
                                     <action selector="connect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cwn-j6-abQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connected Server" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsS-UQ-h3a">
+                                <rect key="frame" x="231" y="273" width="139" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="139" id="T58-BS-xI7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Vz5-QB-7rS" secondAttribute="centerX" constant="-0.5" id="6Kc-Vh-Vv7"/>
+                            <constraint firstAttribute="centerX" secondItem="SsS-UQ-h3a" secondAttribute="centerX" constant="-0.5" id="F6v-SU-cM0"/>
                             <constraint firstItem="V5q-i8-w8J" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="FaA-0S-whK"/>
                             <constraint firstItem="oVg-aO-Go7" firstAttribute="top" secondItem="V5q-i8-w8J" secondAttribute="bottom" constant="45" id="IAi-AR-YBx"/>
                             <constraint firstAttribute="centerX" secondItem="V5q-i8-w8J" secondAttribute="centerX" id="NAC-PG-ZWq"/>
                             <constraint firstAttribute="centerX" secondItem="oVg-aO-Go7" secondAttribute="centerX" id="PvS-8w-ez1"/>
+                            <constraint firstItem="SsS-UQ-h3a" firstAttribute="top" secondItem="Vz5-QB-7rS" secondAttribute="bottom" constant="35" id="WM5-6T-Bbu"/>
                             <constraint firstItem="Vz5-QB-7rS" firstAttribute="top" secondItem="oVg-aO-Go7" secondAttribute="bottom" constant="46" id="fdE-RA-axc"/>
                         </constraints>
                     </view>

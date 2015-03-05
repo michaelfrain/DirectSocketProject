@@ -12,6 +12,7 @@
 
 @property (nonatomic, weak) IBOutlet UITextField *textPort;
 @property (nonatomic, weak) IBOutlet UITextField *textHostname;
+@property (nonatomic, weak) IBOutlet UILabel *labelConnectedServer;
 
 @end
 
@@ -20,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.socket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:NULL];
+    self.socket.delegate = self;
 }
 
 - (IBAction)connect:(id)sender {
@@ -38,6 +40,6 @@
 
 - (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port
 {
-    
+    self.labelConnectedServer.text = [NSString stringWithFormat:@"Connected to server %@ on port %hu", host, port];
 }
 @end
