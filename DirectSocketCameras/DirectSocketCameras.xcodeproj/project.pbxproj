@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D39BA3C21AA8F4BC006A80A9 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D39BA3C11AA8F4BC006A80A9 /* AsyncSocket.m */; };
+		D39BA3CA1AA98891006A80A9 /* CatPhoto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D39BA3C91AA98891006A80A9 /* CatPhoto.jpg */; };
+		D39BA3CC1AA9889F006A80A9 /* Twitter.json in Resources */ = {isa = PBXBuildFile; fileRef = D39BA3CB1AA9889F006A80A9 /* Twitter.json */; };
+		D39BA3CF1AA9901F006A80A9 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D39BA3CE1AA9901F006A80A9 /* AsyncUdpSocket.m */; };
+		D39BA3D01AA99619006A80A9 /* 229-x6hu.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D39BA3C81AA9888A006A80A9 /* 229-x6hu.mp4 */; };
 		D3C27E431AA7868A00E97127 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C27E421AA7868A00E97127 /* main.m */; };
 		D3C27E461AA7868A00E97127 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C27E451AA7868A00E97127 /* AppDelegate.m */; };
 		D3C27E491AA7868A00E97127 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C27E481AA7868A00E97127 /* ViewController.m */; };
@@ -28,6 +33,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D39BA3C01AA8F4BC006A80A9 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		D39BA3C11AA8F4BC006A80A9 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		D39BA3C81AA9888A006A80A9 /* 229-x6hu.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "229-x6hu.mp4"; sourceTree = "<group>"; };
+		D39BA3C91AA98891006A80A9 /* CatPhoto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CatPhoto.jpg; sourceTree = "<group>"; };
+		D39BA3CB1AA9889F006A80A9 /* Twitter.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Twitter.json; sourceTree = "<group>"; };
+		D39BA3CD1AA9901F006A80A9 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		D39BA3CE1AA9901F006A80A9 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
 		D3C27E3D1AA7868A00E97127 /* DirectSocketCameras.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirectSocketCameras.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C27E411AA7868A00E97127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3C27E421AA7868A00E97127 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +100,10 @@
 				D3C27E451AA7868A00E97127 /* AppDelegate.m */,
 				D3C27E471AA7868A00E97127 /* ViewController.h */,
 				D3C27E481AA7868A00E97127 /* ViewController.m */,
+				D39BA3C01AA8F4BC006A80A9 /* AsyncSocket.h */,
+				D39BA3C11AA8F4BC006A80A9 /* AsyncSocket.m */,
+				D39BA3CD1AA9901F006A80A9 /* AsyncUdpSocket.h */,
+				D39BA3CE1AA9901F006A80A9 /* AsyncUdpSocket.m */,
 				D3C27E661AA7A7CD00E97127 /* GCDAsyncSocket.h */,
 				D3C27E671AA7A7CD00E97127 /* GCDAsyncSocket.m */,
 				D3C27E4A1AA7868A00E97127 /* Main.storyboard */,
@@ -102,6 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				D3C27E411AA7868A00E97127 /* Info.plist */,
+				D39BA3C81AA9888A006A80A9 /* 229-x6hu.mp4 */,
+				D39BA3C91AA98891006A80A9 /* CatPhoto.jpg */,
+				D39BA3CB1AA9889F006A80A9 /* Twitter.json */,
 				D3C27E421AA7868A00E97127 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -204,9 +223,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39BA3D01AA99619006A80A9 /* 229-x6hu.mp4 in Resources */,
 				D3C27E4C1AA7868A00E97127 /* Main.storyboard in Resources */,
 				D3C27E511AA7868A00E97127 /* LaunchScreen.xib in Resources */,
+				D39BA3CA1AA98891006A80A9 /* CatPhoto.jpg in Resources */,
 				D3C27E4E1AA7868A00E97127 /* Images.xcassets in Resources */,
+				D39BA3CC1AA9889F006A80A9 /* Twitter.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +247,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3C27E681AA7A7CD00E97127 /* GCDAsyncSocket.m in Sources */,
+				D39BA3C21AA8F4BC006A80A9 /* AsyncSocket.m in Sources */,
 				D3C27E491AA7868A00E97127 /* ViewController.m in Sources */,
+				D39BA3CF1AA9901F006A80A9 /* AsyncUdpSocket.m in Sources */,
 				D3C27E461AA7868A00E97127 /* AppDelegate.m in Sources */,
 				D3C27E431AA7868A00E97127 /* main.m in Sources */,
 			);
@@ -420,6 +444,7 @@
 				D3C27E621AA7868A00E97127 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3C27E631AA7868A00E97127 /* Build configuration list for PBXNativeTarget "DirectSocketCamerasTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +453,7 @@
 				D3C27E651AA7868A00E97127 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

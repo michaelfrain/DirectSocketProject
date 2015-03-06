@@ -8,10 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "GCDAsyncSocket.h"
+//#import "AsyncSocket.h"
+//#import "AsyncUdpSocket.h"
 
 @interface ViewController : UIViewController<GCDAsyncSocketDelegate>
 
 @property (nonatomic, strong) GCDAsyncSocket *socket;
+//@property (nonatomic, strong) AsyncSocket *socket;
+//@property (nonatomic, strong) AsyncUdpSocket *socket;
+
+@property (nonatomic, strong) NSDate *startDate;
+@property (nonatomic, strong) NSDate *endDate;
+@property NSUInteger dataLength;
 
 @end
 

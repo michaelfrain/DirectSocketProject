@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -42,7 +43,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connected Server" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsS-UQ-h3a">
-                                <rect key="frame" x="231" y="273" width="139" height="20.5"/>
+                                <rect key="frame" x="231" y="273" width="139" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="139" id="T58-BS-xI7"/>
                                 </constraints>
@@ -50,22 +51,125 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MP4 video:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fi5-WV-JzU">
+                                <rect key="frame" x="31" y="348" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFt-8R-Lcg">
+                                <rect key="frame" x="285" y="344" width="30" height="30"/>
+                                <state key="normal" title="Pull">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pullItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hB0-MW-yf4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbj-I0-quU">
+                                <rect key="frame" x="533" y="344" width="36" height="30"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vre-lw-IOr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JPEG photo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieE-iw-yLc">
+                                <rect key="frame" x="31" y="405" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmS-K9-Jxa">
+                                <rect key="frame" x="285" y="401" width="30" height="30"/>
+                                <state key="normal" title="Pull">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pullItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="inN-a5-LQH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHD-mj-dN6">
+                                <rect key="frame" x="533" y="401" width="36" height="30"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LEQ-g8-wJn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JSON text:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANc-dK-ZdT">
+                                <rect key="frame" x="31" y="463" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mld-ik-xiT">
+                                <rect key="frame" x="285" y="459" width="30" height="30"/>
+                                <state key="normal" title="Pull">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pullItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AVs-V3-vak"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rol-iR-Hkb">
+                                <rect key="frame" x="533" y="459" width="36" height="30"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AbT-0O-fpt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Mld-ik-xiT" firstAttribute="top" secondItem="qmS-K9-Jxa" secondAttribute="bottom" constant="28" id="0tp-lr-Vq5"/>
+                            <constraint firstAttribute="centerX" secondItem="iFt-8R-Lcg" secondAttribute="centerX" id="4aS-CF-TeJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rol-iR-Hkb" secondAttribute="trailing" constant="15" id="6Hd-7B-8B0"/>
                             <constraint firstAttribute="centerX" secondItem="Vz5-QB-7rS" secondAttribute="centerX" constant="-0.5" id="6Kc-Vh-Vv7"/>
+                            <constraint firstItem="vbj-I0-quU" firstAttribute="centerY" secondItem="iFt-8R-Lcg" secondAttribute="centerY" id="9fC-kI-BuI"/>
                             <constraint firstAttribute="centerX" secondItem="SsS-UQ-h3a" secondAttribute="centerX" constant="-0.5" id="F6v-SU-cM0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vbj-I0-quU" secondAttribute="trailing" constant="15" id="FWS-9q-qQE"/>
                             <constraint firstItem="V5q-i8-w8J" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="FaA-0S-whK"/>
+                            <constraint firstItem="ANc-dK-ZdT" firstAttribute="centerY" secondItem="Mld-ik-xiT" secondAttribute="centerY" constant="-0.5" id="H5g-IO-u0q"/>
                             <constraint firstItem="oVg-aO-Go7" firstAttribute="top" secondItem="V5q-i8-w8J" secondAttribute="bottom" constant="45" id="IAi-AR-YBx"/>
                             <constraint firstAttribute="centerX" secondItem="V5q-i8-w8J" secondAttribute="centerX" id="NAC-PG-ZWq"/>
+                            <constraint firstItem="Fi5-WV-JzU" firstAttribute="centerY" secondItem="iFt-8R-Lcg" secondAttribute="centerY" constant="-0.5" id="OlQ-D1-6Es"/>
                             <constraint firstAttribute="centerX" secondItem="oVg-aO-Go7" secondAttribute="centerX" id="PvS-8w-ez1"/>
+                            <constraint firstItem="ieE-iw-yLc" firstAttribute="centerY" secondItem="qmS-K9-Jxa" secondAttribute="centerY" constant="-0.5" id="S5H-wK-6ex"/>
+                            <constraint firstItem="ANc-dK-ZdT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="SP8-3z-jVD"/>
                             <constraint firstItem="SsS-UQ-h3a" firstAttribute="top" secondItem="Vz5-QB-7rS" secondAttribute="bottom" constant="35" id="WM5-6T-Bbu"/>
+                            <constraint firstItem="Fi5-WV-JzU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="WaD-Rr-v4o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cHD-mj-dN6" secondAttribute="trailing" constant="15" id="cd9-ae-Xmb"/>
                             <constraint firstItem="Vz5-QB-7rS" firstAttribute="top" secondItem="oVg-aO-Go7" secondAttribute="bottom" constant="46" id="fdE-RA-axc"/>
+                            <constraint firstItem="ieE-iw-yLc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="gph-L9-S39"/>
+                            <constraint firstAttribute="centerX" secondItem="qmS-K9-Jxa" secondAttribute="centerX" id="j0i-M0-R08"/>
+                            <constraint firstItem="iFt-8R-Lcg" firstAttribute="top" secondItem="SsS-UQ-h3a" secondAttribute="bottom" constant="50" id="pCq-3m-di1"/>
+                            <constraint firstItem="Mld-ik-xiT" firstAttribute="centerY" secondItem="rol-iR-Hkb" secondAttribute="centerY" id="uhI-nK-qI3"/>
+                            <constraint firstAttribute="centerX" secondItem="Mld-ik-xiT" secondAttribute="centerX" id="vgk-bN-Cql"/>
+                            <constraint firstItem="qmS-K9-Jxa" firstAttribute="centerY" secondItem="cHD-mj-dN6" secondAttribute="centerY" id="yyQ-61-Aw8"/>
+                            <constraint firstItem="qmS-K9-Jxa" firstAttribute="top" secondItem="iFt-8R-Lcg" secondAttribute="bottom" constant="27" id="yyi-Hx-QaL"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonPullJSON" destination="Mld-ik-xiT" id="dDb-db-KVF"/>
+                        <outlet property="buttonPullPhoto" destination="qmS-K9-Jxa" id="uL2-jy-hab"/>
+                        <outlet property="buttonPullVideo" destination="iFt-8R-Lcg" id="sGB-rY-53v"/>
+                        <outlet property="buttonSendJSON" destination="rol-iR-Hkb" id="lBr-xn-Ovo"/>
+                        <outlet property="buttonSendPhoto" destination="cHD-mj-dN6" id="qgi-xg-i4Z"/>
+                        <outlet property="buttonSendVideo" destination="vbj-I0-quU" id="qt9-rd-x8W"/>
+                        <outlet property="labelConnectedServer" destination="SsS-UQ-h3a" id="LNx-l1-aQq"/>
                         <outlet property="textHostname" destination="oVg-aO-Go7" id="E3k-2k-ODK"/>
                         <outlet property="textPort" destination="V5q-i8-w8J" id="kdB-c9-bul"/>
+                        <outletCollection property="pullSendButtons" destination="iFt-8R-Lcg" id="Are-k2-kxA"/>
+                        <outletCollection property="pullSendButtons" destination="qmS-K9-Jxa" id="BHq-tB-X3v"/>
+                        <outletCollection property="pullSendButtons" destination="Mld-ik-xiT" id="VUk-oe-ooM"/>
+                        <outletCollection property="pullSendButtons" destination="vbj-I0-quU" id="SHW-wg-Pvs"/>
+                        <outletCollection property="pullSendButtons" destination="cHD-mj-dN6" id="x2C-pK-61e"/>
+                        <outletCollection property="pullSendButtons" destination="rol-iR-Hkb" id="iWl-zn-PyB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
