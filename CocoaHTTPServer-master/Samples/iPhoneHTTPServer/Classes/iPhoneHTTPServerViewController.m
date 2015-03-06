@@ -10,12 +10,13 @@
 @implementation iPhoneHTTPServerViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];    
+    [super viewDidLoad];
 }
 
 - (IBAction)refreshInfo:(id)sender {
-    self.labelServerName.text = [self.currentServer domain];
+    self.labelServerName.text = [NSString stringWithFormat:@"%@.%@", [self.currentServer name], [self.currentServer domain]];
     self.labelPort.text = [NSString stringWithFormat:@"%hu", [self.currentServer listeningPort]];
+    self.labelNumberOfConnections.text = [NSString stringWithFormat:@"%i", [self.currentServer numberOfHTTPConnections]];
 }
 
 @end

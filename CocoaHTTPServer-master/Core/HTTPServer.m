@@ -12,7 +12,7 @@
 // Other flags: trace
 static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
 
-@interface HTTPServer (PrivateAPI)
+@interface HTTPServer (PrivateAPI)<GCDAsyncSocketDelegate>
 
 - (void)unpublishBonjour;
 - (void)publishBonjour;
@@ -553,6 +553,14 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
 	[connectionsLock unlock];
 	
 	[newConnection start];
+    
+    [asyncSocket readDataWithTimeout:-1 tag:1];
+    NSLog(@"New socket accepted.");
+}
+
+- (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
+    [sock readDataWithTimeout:-1 tag:1];
+    NSLog(@"Data was read.");
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
