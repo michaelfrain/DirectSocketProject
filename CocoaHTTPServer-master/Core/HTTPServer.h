@@ -51,7 +51,7 @@
 	
 	BOOL isRunning;
 }
-
+@property (nonatomic, strong) GCDAsyncSocket *asyncSocketProperty;
 
 /**
  * Specifies the document root to serve files from.
@@ -202,5 +202,7 @@
 
 - (NSUInteger)numberOfHTTPConnections;
 - (NSUInteger)numberOfWebSocketConnections;
+
+- (void)setNewDelegate:(id)newDelegate;
 
 @end

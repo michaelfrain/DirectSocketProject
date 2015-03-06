@@ -2,6 +2,8 @@
 
 @class iPhoneHTTPServerViewController;
 @class HTTPServer;
+@class HTTPConfig;
+@class HTTPConnection;
 
 @interface iPhoneHTTPServerAppDelegate : NSObject <UIApplicationDelegate>
 {
@@ -9,6 +11,10 @@
 	
 	UIWindow *window;
 	iPhoneHTTPServerViewController *viewController;
+    
+    HTTPConfig *currentConfig;
+    HTTPConnection *connection;
+    
 }
 
 @property (nonatomic) IBOutlet UIWindow *window;

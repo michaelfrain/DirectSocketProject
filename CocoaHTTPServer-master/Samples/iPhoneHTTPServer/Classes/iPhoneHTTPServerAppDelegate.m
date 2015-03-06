@@ -3,6 +3,7 @@
 #import "HTTPServer.h"
 #import "DDLog.h"
 #import "DDTTYLogger.h"
+#import "HTTPConnection.h"
 
 // Log levels: off, error, warn, info, verbose
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
@@ -54,10 +55,15 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
     [self startServer];
     
+    currentConfig = [[HTTPConfig alloc] initWithServer:httpServer documentRoot:[httpServer documentRoot]];
+    
+    
     // Add the view controller's view to the window and display.
     [window addSubview:viewController.view];
     viewController.labelPort.text = [NSString stringWithFormat:@"%hu", [httpServer listeningPort]];
     viewController.currentServer = httpServer;
+    viewController.acceptedSocket = httpServer.asyncSocketProperty;
+    viewController.currentConfig = currentConfig;
     [window makeKeyAndVisible];
     
     return YES;

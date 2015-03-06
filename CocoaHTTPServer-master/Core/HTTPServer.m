@@ -12,13 +12,17 @@
 // Other flags: trace
 static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
 
-@interface HTTPServer (PrivateAPI)<GCDAsyncSocketDelegate>
+@interface HTTPServer (PrivateAPI)
 
 - (void)unpublishBonjour;
 - (void)publishBonjour;
 
 + (void)startBonjourThreadIfNeeded;
 + (void)performBonjourBlock:(dispatch_block_t)block;
+
+@end
+
+@interface HTTPServer()<GCDAsyncSocketDelegate>
 
 @end
 
@@ -52,6 +56,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
 		
 		// Initialize underlying GCD based tcp socket
 		asyncSocket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:serverQueue];
+        self.asyncSocketProperty = asyncSocket;
 		
 		// Use default connection class of HTTPConnection
 		connectionClass = [HTTPConnection self];
@@ -554,13 +559,11 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
 	
 	[newConnection start];
     
+    NSString *string = @"Server acknowledgement.";
+    [asyncSocket writeData:[string dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:5];
+    
     [asyncSocket readDataWithTimeout:-1 tag:1];
     NSLog(@"New socket accepted.");
-}
-
-- (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
-    [sock readDataWithTimeout:-1 tag:1];
-    NSLog(@"Data was read.");
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -776,6 +779,10 @@ static NSThread *bonjourThread;
 	             onThread:bonjourThread
 	           withObject:block
 	        waitUntilDone:YES];
+}
+
+- (void)setNewDelegate:(id)newDelegate {
+    [asyncSocket setDelegate:newDelegate delegateQueue:serverQueue];
 }
 
 @end
