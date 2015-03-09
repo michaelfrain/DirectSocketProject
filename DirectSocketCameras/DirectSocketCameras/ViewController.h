@@ -11,7 +11,7 @@
 //#import "AsyncSocket.h"
 //#import "AsyncUdpSocket.h"
 
-@interface ViewController : UIViewController<GCDAsyncSocketDelegate>
+@interface ViewController : UIViewController<GCDAsyncSocketDelegate, UITextFieldDelegate>
 
 @property (nonatomic, strong) GCDAsyncSocket *socket;
 //@property (nonatomic, strong) AsyncSocket *socket;

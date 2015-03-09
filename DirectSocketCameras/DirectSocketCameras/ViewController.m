@@ -47,6 +47,13 @@
             button.enabled = YES;
         }
     }
+    if ([self.textPort isFirstResponder]) {
+        [self.textPort resignFirstResponder];
+    }
+    
+    if ([self.textHostname isFirstResponder]) {
+        [self.textHostname resignFirstResponder];
+    }
 }
 
 - (IBAction)pullItem:(UIButton *)sender {
